@@ -163,7 +163,7 @@ buttonPage.onclick = changeElements;
 // add all the prices and assign the total to be the 
 // innerHTML value of the element with the id total.
 
-// Answer - I got stuck and I just could not solve this one, unfortuntately.
+// Answer - I got stuck and probably overthought it and I just could not solve this one, unfortuntately.
 var toys = [
 	{
 		name: "Lego",
@@ -190,7 +190,12 @@ var totalPrice = document.querySelector("#total");
 
 buttonPrice.onclick = function totalPrice() {
 for (var i = 0; i < toys.length; i++) {
+	var sum = 0;
 	var totalPrice = toys[i].price;
+	if (!Number.isNaN(parseFloat(toys[i].price))) {
+		parseFloat + toys[i].price;
+	   }
+	   sum += + toys[i].price;
 	toyContainer.innerHTML +=  `<div class="total">` + totalPrice + `</div>`;
 	}
 }
